@@ -1,13 +1,12 @@
-import Introduction from './components/Introduction';
-import About from './components/About';
-import Expertise from './components/Expertise';
-import Experience from './components/Experience';
-import Education from './components/Education';
+import Introduction from "./components/Introduction";
+import About from "./components/About";
+import Expertise from "./components/Expertise";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
 // import Projects from './components/Projects';
 // import Contact from './components/Contact';
 // import Footer from './components/Footer';
-import './App.css';
-import SectionBreak from './components/SectionBreak';
+import SectionBreak from "./components/SectionBreak";
 
 function App() {
   return (
