@@ -3,10 +3,10 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     colors: {
-      primary: "#4A403A",
-      secondary: "#A45D5D",
-      alternate: "#FFC069",
-      "off-white": "#EFEFEF",
+      primary: "#F9F7F7",
+      secondary: "#DBE2EF",
+      alternate: "#3F72AF",
+      "off-white": "#112D4E",
     },
     container: {
       padding: {
