@@ -21,7 +21,7 @@ const About = () => {
         </div>
         <div className="mx-auto">
           <img
-            className="ring-8 ring-primary dark:ring-alternate mx-auto text-center rounded-full w-2/3"
+            className="mx-auto text-center shadow-lg rounded-full w-2/3"
             src="/profile-picture.jpg"
             alt="profile"
           />
