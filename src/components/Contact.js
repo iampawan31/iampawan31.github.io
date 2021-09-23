@@ -1,9 +1,9 @@
+import Header from "./Header";
+
 const Contact = () => {
   return (
     <div className="container mx-auto">
-      <div className="font-primary font-bold text-6xl text-primary dark:text-alternate pb-8">
-        CONTACT
-      </div>
+      <Header title="CONTACT" />
       <form action="">
         <div className="form-control flex flex-col py-4">
           <label htmlFor="name" className="text-2xl font-primary">

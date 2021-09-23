@@ -7,6 +7,32 @@ export const experience = [
     responsibilities:
       "Completing projects for clients based out of India and US.",
     location: "Remote",
+    technologies: [
+      {
+        name: "#reactjs",
+        color: "blue",
+      },
+      {
+        name: "#vuejs",
+        color: "green",
+      },
+      {
+        name: "#expressjs",
+        color: "black",
+      },
+      {
+        name: "#nuxtjs",
+        color: "violet",
+      },
+      {
+        name: "#nextjs",
+        color: "pink",
+      },
+      {
+        name: "#tailwind",
+        color: "darkgreen",
+      },
+    ],
   },
   {
     company: "Expertily.com",
@@ -21,6 +47,24 @@ export const experience = [
             Also wrote automated tests for bug free code. Deployed the
             application to web server.`,
     location: "New Delhi, India",
+    technologies: [
+      {
+        name: "#vuejs",
+        color: "green",
+      },
+      {
+        name: "#nuxtjs",
+        color: "violet",
+      },
+      {
+        name: "#vuetifyjs",
+        color: "orange",
+      },
+      {
+        name: "#laravel",
+        color: "darkred",
+      },
+    ],
   },
   {
     company: "Anti Alias Ventures",
@@ -34,6 +78,28 @@ export const experience = [
             with strict deadlines, review and give feedback to junior developer
             on code quality and refactoring.`,
     location: "New Delhi, India",
+    technologies: [
+      {
+        name: "#vuejs",
+        color: "green",
+      },
+      {
+        name: "#nuxtjs",
+        color: "violet",
+      },
+      {
+        name: "#vuetifyjs",
+        color: "orange",
+      },
+      {
+        name: "#laravel",
+        color: "darkred",
+      },
+      {
+        name: "#codeignitor",
+        color: "darkblue",
+      },
+    ],
   },
   {
     company: "Anti Alias Ventures",
@@ -45,19 +111,32 @@ export const experience = [
             projects for bugs and give feedback and improve technical and
             communication skills.`,
     location: "New Delhi, India",
-  },
-  {
-    company: "Anti Alias Ventures",
-    jobTitle: "Full Stack Developer",
-    from: "August 2014",
-    to: "March 2016",
-    responsibilities: `I was responsible for handling projects using different technologies
-            and work with a team of developers. Responsibilities included work
-            on various projects and interact with clients to understand their
-            requirements, work with a team of developers to deliver the projects
-            with strict deadlines, review and give feedback to junior developer
-            on code quality and refactoring.`,
-    location: "New Delhi, India",
+    technologies: [
+      {
+        name: "#vuejs",
+        color: "green",
+      },
+      {
+        name: "#nuxtjs",
+        color: "violet",
+      },
+      {
+        name: "#vuetifyjs",
+        color: "orange",
+      },
+      {
+        name: "#laravel",
+        color: "darkred",
+      },
+      {
+        name: "#codeignitor",
+        color: "darkblue",
+      },
+      {
+        name: "#mysql",
+        color: "darkgray",
+      },
+    ],
   },
   {
     company: "Mphasis Limited",

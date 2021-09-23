@@ -14,13 +14,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import ExpertiseItem from "./ExpertiseItem";
+import Header from "./Header";
 
 const Expertise = () => {
   return (
     <div className="container mx-auto">
-      <div className="font-primary font-bold text-6xl text-primary dark:text-alternate pb-8">
-        EXPERTISE
-      </div>
+      <Header title="EXPERTISE" />
       <div className="flex flex-row flex-wrap gap-x-4 gap-y-4">
         <ExpertiseItem icon={faLaravel} />
         <ExpertiseItem icon={faReact} />

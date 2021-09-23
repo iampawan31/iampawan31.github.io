@@ -5,7 +5,7 @@ import useDarkMode from "../hooks/useDarkMode";
 const DarkModeButton = () => {
   const [colorTheme, setTheme] = useDarkMode();
   return (
-    <div className="absolute top-5 right-5 transition-all">
+    <div className="fixed top-5 right-5 transition-all">
       <button
         onClick={() => setTheme(colorTheme)}
         className="transition-all cursor-pointer focus:outline-none"

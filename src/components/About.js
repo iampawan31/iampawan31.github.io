@@ -5,11 +5,12 @@ import {
   faGithub,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import Header from "./Header";
 
 const About = () => {
   return (
     <div className="container mx-auto py-10 text-primary dark:text-alternate">
-      <div className="font-primary font-bold text-6xl pb-8">ABOUT</div>
+      <Header title="ABOUT" />
       <div className="font-body grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xs:grid-cols-1 gap-4">
         <div className="break-words text-md">
           Experienced Full Stack Developer with a demonstrated history of
