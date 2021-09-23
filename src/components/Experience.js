@@ -5,31 +5,23 @@ import { experience } from "../data/experience";
 const Experience = () => {
   return (
     <div className="container mx-auto">
-      <div className="font-heading font-bold text-6xl text-primary pb-8">
-        experience
-      </div>
+      <div className="font-primary font-bold text-6xl pb-8">EXPERIENCE</div>
       {experience &&
         experience.map((ex, index) => {
           return (
-            <div key={index} className="grid grid-cols-3 gap-2 py-6">
+            <div
+              key={index}
+              className="font-body grid grid-cols-3 gap-2 py-6 hover:bg-primary dark:hover:bg-alternate dark:hover:text-primary hover:text-alternate rounded-lg transition hover:shadow px-2"
+            >
               <div>
-                <h1 className="font-heading text-primary text-md font-bold mb-2">
-                  {ex.company}
-                </h1>
-                <p className="font-heading text-primary">{`${ex.from} - ${ex.to}`}</p>
+                <h1 className="text-md font-bold mb-2">{ex.company}</h1>
+                <p>{`${ex.from} - ${ex.to}`}</p>
               </div>
               <div className="col-span-2">
-                <h1 className="font-heading text-primary font-bold mb-2">
-                  {ex.jobTitle}
-                </h1>
-                <p className="font-heading text-primary">
-                  {ex.responsibilities}
-                </p>
-                <p className="text-primary mt-2">
-                  <FontAwesomeIcon
-                    className="text-primary mr-2"
-                    icon={faMapMarkerAlt}
-                  />
+                <h1 className="font-bold mb-2">{ex.jobTitle}</h1>
+                <p>{ex.responsibilities}</p>
+                <p className="mt-2">
+                  <FontAwesomeIcon className="mr-2" icon={faMapMarkerAlt} />
                   {ex.location}
                 </p>
               </div>

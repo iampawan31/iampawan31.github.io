@@ -1,12 +1,12 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     colors: {
-      primary: "#FFFFFF",
-      secondary: "#616161",
-      alternate: "#292929",
-      dark: "#39311d",
+      primary: "#4A403A",
+      secondary: "#A45D5D",
+      alternate: "#FFC069",
+      "off-white": "#EFEFEF",
     },
     container: {
       padding: {
@@ -17,8 +17,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      heading: ["IBM Plex Sans"],
-      body: ["Source Code Pro"],
+      primary: ["Major Mono Display"],
+      body: ["Raleway"],
     },
     extend: {},
   },

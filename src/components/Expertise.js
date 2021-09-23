@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHtml5,
   faCss3,
@@ -11,48 +10,31 @@ import {
   faNode,
   faNpm,
   faWordpress,
-  faMagento,
-  faAws,
-  faDigitalOcean,
   faGit,
-} from '@fortawesome/free-brands-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import ExpertiseItem from "./ExpertiseItem";
 
 const Expertise = () => {
   return (
-    <div className="md:container md:mx-auto">
-      <div className="font-heading font-bold text-6xl text-primary pb-8">
-        expertise
+    <div className="container mx-auto">
+      <div className="font-primary font-bold text-6xl text-primary dark:text-alternate pb-8">
+        EXPERTISE
       </div>
-      <div className="grid grid-cols-4 md:grid-cols-4 gap-2">
-        <FontAwesomeIcon
-          size="6x"
-          className="text-primary text-center"
-          icon={faLaravel}
-        />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faReact} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faVuejs} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faHtml5} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faCss3} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faPhp} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faJs} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faNodeJs} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faNode} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faNpm} />
-        <FontAwesomeIcon
-          size="6x"
-          className="text-primary"
-          icon={faWordpress}
-        />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faMagento} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faAws} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faGit} />
-        <FontAwesomeIcon size="6x" className="text-primary" icon={faDatabase} />
-        <FontAwesomeIcon
-          size="6x"
-          className="text-primary"
-          icon={faDigitalOcean}
-        />
+      <div className="flex flex-row flex-wrap gap-x-4 gap-y-4">
+        <ExpertiseItem icon={faLaravel} />
+        <ExpertiseItem icon={faReact} />
+        <ExpertiseItem icon={faVuejs} />
+        <ExpertiseItem icon={faHtml5} />
+        <ExpertiseItem icon={faCss3} />
+        <ExpertiseItem icon={faPhp} />
+        <ExpertiseItem icon={faJs} />
+        <ExpertiseItem icon={faNodeJs} />
+        <ExpertiseItem icon={faNode} />
+        <ExpertiseItem icon={faNpm} />
+        <ExpertiseItem icon={faWordpress} />
+        <ExpertiseItem icon={faGit} />
+        <ExpertiseItem icon={faDatabase} />
       </div>
     </div>
   );
