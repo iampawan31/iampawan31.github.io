@@ -99,6 +99,39 @@ export const projects = [
     ],
   },
   {
+    name: "Blog App",
+    description: "September 2009",
+    githubLink: "https://github.com/iampawan31/fullstack_vue_express",
+    demoLink: "https://floating-brook-96150.herokuapp.com",
+    imageLink: "./blog-app.png",
+    technologies: [
+      {
+        name: "#vuejs",
+        color: "green",
+      },
+      {
+        name: "#expressjs",
+        color: "violet",
+      },
+      {
+        name: "#vuetifyjs",
+        color: "orange",
+      },
+      {
+        name: "#laravel",
+        color: "darkred",
+      },
+      {
+        name: "#codeignitor",
+        color: "darkblue",
+      },
+      {
+        name: "#mysql",
+        color: "darkgray",
+      },
+    ],
+  },
+  {
     name: "Glassmorphism Login Concept",
     description: "September 2009",
     githubLink: "https://github.com/iampawan31/next-weather-app",
