@@ -1,5 +1,7 @@
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+import { FC, ReactElement } from 'react'
+
+const Footer: FC = (): ReactElement => {
+  const currentYear: number = new Date().getFullYear()
   return (
     <div className="bg-primary dark:bg-alternate dark:text-primary py-5 text-alternate mt-32">
       <div className="container mx-auto">
@@ -10,7 +12,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

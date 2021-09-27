@@ -1,6 +1,29 @@
-const ProjectItem = ({ project }) => {
+import { FC, ReactElement } from 'react'
+
+type ProjectItemProps = {
+  project: {
+    name: string
+    description: string
+    githubLink: string
+    demoLink: string
+    imageLink: string
+    technologies?: {
+      name: string
+      color: string
+    }[]
+  }
+}
+
+const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
   return (
-    <div className="font-body py-6 flex rounded-lg transition dark:text-alternate text-primary mb-6 hover:shadow px-2">
+    <div className="font-body py-6 flex rounded-lg transition dark:text-alternate text-primary mb-6 hover:shadow px-2 space-x-4">
+      <div>
+        <img
+          className="rounded-lg shadow max-w-sm"
+          src={project.imageLink}
+          alt=""
+        />
+      </div>
       <div>
         <div className="font-bold text-2xl">{project.name}</div>
         <div className="py-4">{project.description}</div>
@@ -25,6 +48,7 @@ const ProjectItem = ({ project }) => {
               <span
                 className="mr-2 rounded-lg py-1 bg-primary dark:bg-alternate px-2"
                 style={{ color: tech.color }}
+                key={index}
               >
                 {tech.name}
               </span>
@@ -32,11 +56,8 @@ const ProjectItem = ({ project }) => {
           </div>
         )}
       </div>
-      <div>
-        <img className="rounded-lg shadow " src={project.imageLink} alt="" />
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectItem;
+export default ProjectItem

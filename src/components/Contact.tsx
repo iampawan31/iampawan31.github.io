@@ -1,6 +1,7 @@
-import Header from "./Header";
+import { FC, ReactElement } from 'react'
+import Header from './Header'
 
-const Contact = () => {
+const Contact: FC = (): ReactElement => {
   return (
     <div className="container mx-auto">
       <Header title="CONTACT" />
@@ -31,9 +32,6 @@ const Contact = () => {
           </label>
           <textarea
             name="message"
-            id=""
-            cols="30"
-            rows="10"
             className="text-2xl bg-primary text-alternate dark:bg-alternate dark:text-primary focus:outline-none rounded p-2 shadow-sm"
           ></textarea>
         </div>
@@ -44,7 +42,7 @@ const Contact = () => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

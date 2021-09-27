@@ -1,13 +1,14 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FC, ReactElement } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTwitter,
   faLinkedin,
   faGithub,
   faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
-import Header from "./Header";
+} from '@fortawesome/free-brands-svg-icons'
+import Header from './Header'
 
-const About = () => {
+const About: FC = (): ReactElement => {
   return (
     <div className="container mx-auto py-10 text-primary dark:text-alternate">
       <Header title="ABOUT" />
@@ -46,7 +47,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

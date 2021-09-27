@@ -1,9 +1,27 @@
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ReactElement, FC } from 'react'
 
-const ExperienceItem = ({ experience }) => {
+type ExperienceItemProps = {
+  experience: {
+    company: string
+    jobTitle: string
+    from: string
+    to: string
+    responsibilities: string
+    location: string
+    technologies?: {
+      name: string
+      color: string
+    }[]
+  }
+}
+
+const ExperienceItem: FC<ExperienceItemProps> = ({
+  experience,
+}): ReactElement => {
   return (
-    <div className="font-body py-6 group hover:bg-primary dark:hover:bg-alternate dark:hover:text-primary hover:text-alternate rounded-lg transition hover:shadow px-2">
+    <div className="pb-10 font-body py-6 group hover:bg-primary dark:hover:bg-alternate dark:hover:text-primary hover:text-alternate rounded-lg transition hover:shadow px-2">
       <div>
         <span className="font-bold">{experience.jobTitle}</span> -
         {experience.company}
@@ -20,6 +38,7 @@ const ExperienceItem = ({ experience }) => {
             <span
               className="mr-2 rounded-lg group-hover:bg-alternate dark:group-hover:bg-primary dark:bg-alternate py-1 bg-primary px-2"
               style={{ color: tech.color }}
+              key={index}
             >
               {tech.name}
             </span>
@@ -27,7 +46,7 @@ const ExperienceItem = ({ experience }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ExperienceItem;
+export default ExperienceItem

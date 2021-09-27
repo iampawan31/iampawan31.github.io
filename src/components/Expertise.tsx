@@ -11,12 +11,13 @@ import {
   faNpm,
   faWordpress,
   faGit,
-} from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
-import ExpertiseItem from "./ExpertiseItem";
-import Header from "./Header";
+} from '@fortawesome/free-brands-svg-icons'
+import { faDatabase } from '@fortawesome/free-solid-svg-icons'
+import { FC, ReactElement } from 'react'
+import ExpertiseItem from './ExpertiseItem'
+import Header from './Header'
 
-const Expertise = () => {
+const Expertise: FC = (): ReactElement => {
   return (
     <div className="container mx-auto">
       <Header title="EXPERTISE" />
@@ -36,7 +37,7 @@ const Expertise = () => {
         <ExpertiseItem icon={faDatabase} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Expertise;
+export default Expertise

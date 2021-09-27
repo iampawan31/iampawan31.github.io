@@ -1,4 +1,6 @@
-const Introduction = () => {
+import { FC, ReactElement } from 'react'
+
+const Introduction: FC = (): ReactElement => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col">
@@ -8,7 +10,7 @@ const Introduction = () => {
         <div className="text-center font-primary text-2xl">Web Developer</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Introduction;
+export default Introduction

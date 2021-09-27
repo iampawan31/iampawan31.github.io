@@ -1,7 +1,18 @@
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC, ReactElement } from 'react'
 
-const EducationItem = ({ education }) => {
+type EducationItemProps = {
+  education: {
+    institutionName: string
+    attendedFrom: string
+    attendedTo: string
+    degree: string
+    location: string
+  }
+}
+
+const EducationItem: FC<EducationItemProps> = ({ education }): ReactElement => {
   return (
     <div className="font-body py-6 group hover:bg-primary dark:hover:bg-alternate dark:hover:text-primary hover:text-alternate rounded-lg transition hover:shadow px-2">
       <div>
@@ -14,7 +25,7 @@ const EducationItem = ({ education }) => {
         {education.location}
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default EducationItem;
+export default EducationItem
