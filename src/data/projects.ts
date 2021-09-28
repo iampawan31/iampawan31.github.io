@@ -163,6 +163,56 @@ export const projects: {
     ],
   },
   {
+    name: 'ExecutiveAB.com',
+    description: 'September 2009',
+    githubLink: 'https://github.com/iampawan31/fullstack_vue_express',
+    demoLink: 'https://floating-brook-96150.herokuapp.com',
+    imageLink: './executiveab-nuxtjs.png',
+    technologies: [
+      {
+        name: '#vuejs',
+        color: 'green',
+      },
+      {
+        name: '#javascript',
+        color: 'pink',
+      },
+      {
+        name: '#nuxtjs',
+        color: 'violet',
+      },
+      {
+        name: '#tailwindcss',
+        color: 'orange',
+      },
+    ],
+  },
+  {
+    name: 'myecaloriecounts.com',
+    description: 'September 2009',
+    githubLink: 'https://github.com/iampawan31/fullstack_vue_express',
+    demoLink: 'https://floating-brook-96150.herokuapp.com',
+    imageLink: './myecaloriecounts.com.png',
+    technologies: [
+      {
+        name: '#wordpress',
+        color: 'green',
+      },
+      {
+        name: '#photoshop',
+        color: 'pink',
+      },
+      {
+        name: '#html',
+        color: 'violet',
+      },
+      {
+        name: '#css',
+        color: 'orange',
+      },
+    ],
+  },
+  {
     name: 'Glassmorphism Login Concept',
     description: 'September 2009',
     githubLink: 'https://github.com/iampawan31/next-weather-app',
@@ -170,28 +220,12 @@ export const projects: {
     imageLink: './glassmorphism-login.jpeg',
     technologies: [
       {
-        name: '#vuejs',
+        name: '#html',
         color: 'green',
       },
       {
-        name: '#nuxtjs',
+        name: '#css',
         color: 'violet',
-      },
-      {
-        name: '#vuetifyjs',
-        color: 'orange',
-      },
-      {
-        name: '#laravel',
-        color: 'darkred',
-      },
-      {
-        name: '#codeignitor',
-        color: 'darkblue',
-      },
-      {
-        name: '#mysql',
-        color: 'darkgray',
       },
     ],
   },

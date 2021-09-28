@@ -3,9 +3,9 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {
-      primary: '#0D92F3',
+      primary: '#232320',
       secondary: '#3D56B2',
-      alternate: '#FFFFFF',
+      alternate: '#FFFAF6',
       'off-white': '#EFF2F5',
     },
     container: {
