@@ -39,7 +39,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
             className="px-4 py-2 ml-2 hover:bg-secondary hover:text-alternate dark:hover:bg-secondary bg-alternate dark:bg-primary dark:text-alternate rounded text-primary"
             href={project.demoLink}
           >
-            Demo
+            Demo Link
           </a>
         </div>
         <div></div>
