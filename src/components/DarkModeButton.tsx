@@ -1,6 +1,7 @@
-import { FC, ReactElement } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC, ReactElement } from 'react'
+import { DARK, LIGHT } from '../constants'
 
 type DarkModeProps = {
   colorTheme: string
@@ -14,12 +15,13 @@ const DarkModeButton: FC<DarkModeProps> = ({
   return (
     <div className="fixed top-5 right-5 transition-all">
       <button
-        onClick={() => setTheme(colorTheme === 'dark' ? 'light' : 'dark')}
+        onClick={() => setTheme(colorTheme === DARK ? LIGHT : DARK)}
         className="transition-all cursor-pointer focus:outline-none"
       >
         <FontAwesomeIcon
           size="2x"
-          icon={colorTheme === 'light' ? faMoon : faSun}
+          className="text-primary dark:text-alternate"
+          icon={colorTheme === LIGHT ? faMoon : faSun}
         />
       </button>
     </div>

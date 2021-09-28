@@ -1,6 +1,7 @@
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ReactElement, FC } from 'react'
+import { FC, ReactElement } from 'react'
+import TechnologyItem from './TechnologyItem'
 
 type ExperienceItemProps = {
   experience: {
@@ -35,13 +36,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({
       {experience.technologies && (
         <div className="pt-4">
           {experience.technologies.map((tech, index) => (
-            <span
-              className="mr-2 rounded-lg group-hover:bg-alternate dark:group-hover:bg-primary dark:bg-alternate py-1 bg-primary px-2"
-              style={{ color: tech.color }}
-              key={index}
-            >
-              {tech.name}
-            </span>
+            <TechnologyItem index={index} name={tech.name} />
           ))}
         </div>
       )}

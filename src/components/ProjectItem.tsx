@@ -1,4 +1,5 @@
 import { FC, ReactElement } from 'react'
+import TechnologyItem from './TechnologyItem'
 
 type ProjectItemProps = {
   project: {
@@ -45,13 +46,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
         {project.technologies && (
           <div className="pt-4">
             {project.technologies.map((tech, index) => (
-              <span
-                className="mr-2 rounded-lg py-1 bg-primary dark:bg-alternate px-2"
-                style={{ color: tech.color }}
-                key={index}
-              >
-                {tech.name}
-              </span>
+              <TechnologyItem index={index} name={tech.name} />
             ))}
           </div>
         )}

@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ReactElement, FC } from 'react'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC, ReactElement } from 'react'
 
 type ExpertiseItemProps = {
   icon: IconProp

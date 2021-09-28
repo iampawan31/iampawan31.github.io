@@ -6,11 +6,13 @@ import Header from './Header'
 const Experience: FC = (): ReactElement => {
   return (
     <div className="container mx-auto">
-      <Header title="EXPERIENCE" />
-      {experience &&
-        experience.map((ex, index) => (
-          <ExperienceItem experience={ex} key={index} />
-        ))}
+      <div className="bg-alternate shadow-sm px-4 py-10">
+        <Header title="EXPERIENCE" />
+        {experience &&
+          experience.map((ex, index) => (
+            <ExperienceItem experience={ex} key={index} />
+          ))}
+      </div>
     </div>
   )
 }

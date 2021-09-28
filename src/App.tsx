@@ -9,13 +9,14 @@ import Footer from './components/Footer'
 import Introduction from './components/Introduction'
 import Projects from './components/Projects'
 import SectionBreak from './components/SectionBreak'
+import { DARK, LIGHT } from './constants'
 
 const App: FC = (): ReactElement => {
   const [theme, setTheme] = useState(
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? DARK : LIGHT
   )
 
-  const colorTheme: string = theme === 'light' ? 'dark' : 'light'
+  const colorTheme: string = theme === LIGHT ? DARK : LIGHT
 
   useEffect(() => {
     const root = window.document.documentElement
@@ -24,7 +25,7 @@ const App: FC = (): ReactElement => {
   }, [theme, colorTheme])
 
   return (
-    <div className="App h-full bg-alternate font-alternate dark:bg-primary text-primary dark:text-alternate">
+    <div className="App h-full pt-10 bg-off-white font-alternate dark:bg-primary text-primary dark:text-primary">
       <DarkModeButton
         colorTheme={theme}
         setTheme={(color) => setTheme(color)}
