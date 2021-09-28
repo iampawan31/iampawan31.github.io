@@ -7,12 +7,12 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC, ReactElement } from 'react'
 import { basicInformation } from '../data/basic'
-import Header from './Header'
+import Header from '../components/Header'
 
 const About: FC = (): ReactElement => {
   return (
     <div className="container mx-auto text-primary">
-      <div className="bg-alternate shadow-sm px-4 py-10">
+      <div className="bg-alternate dark:bg-off-white shadow-sm px-4 py-10">
         <Header title="ABOUT" />
         <div className="font-body grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xs:grid-cols-1 gap-4">
           <div className="break-words text-md">{basicInformation.about}</div>

@@ -1,15 +1,15 @@
 import { FC, ReactElement, useEffect, useState } from 'react'
-import About from './components/About'
-import Contact from './components/Contact'
 import DarkModeButton from './components/DarkModeButton'
-import Education from './components/Education'
-import Experience from './components/Experience'
-import Expertise from './components/Expertise'
 import Footer from './components/Footer'
-import Introduction from './components/Introduction'
-import Projects from './components/Projects'
 import SectionBreak from './components/SectionBreak'
 import { DARK, LIGHT } from './constants'
+import About from './views/About'
+import Contact from './views/Contact'
+import Education from './views/Education'
+import Experience from './views/Experience'
+import Expertise from './views/Expertise'
+import Introduction from './views/Introduction'
+import Projects from './views/Projects'
 
 const App: FC = (): ReactElement => {
   const [theme, setTheme] = useState(

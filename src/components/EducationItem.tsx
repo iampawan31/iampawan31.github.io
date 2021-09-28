@@ -14,16 +14,16 @@ type EducationItemProps = {
 
 const EducationItem: FC<EducationItemProps> = ({ education }): ReactElement => {
   return (
-    <div className="font-body py-6 group hover:bg-primary dark:hover:bg-alternate dark:hover:text-primary hover:text-alternate rounded-lg transition hover:shadow px-2">
-      <div>
+    <div className="font-body mb-10 py-6 bg-primary dark:bg-alternate text-alternate dark:text-primary rounded-lg shadow px-2">
+      <div className="mb-2 text-xl">
         <span className="font-bold">{education.institutionName}</span>
       </div>
-      <div>{`${education.attendedFrom} - ${education.attendedTo}`}</div>
-      <h1 className=" font-bold mb-2">{education.degree}</h1>
-      <p className="mt-2">
+      <div className="font-bold mb-2">{education.degree}</div>
+      <div className="mb-2">{`${education.attendedFrom} - ${education.attendedTo}`}</div>
+      <div className="mt-2">
         <FontAwesomeIcon className="mr-2" icon={faMapMarkerAlt} />
         {education.location}
-      </p>
+      </div>
     </div>
   )
 }
