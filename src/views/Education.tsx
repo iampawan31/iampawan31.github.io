@@ -1,12 +1,12 @@
 import { FC, ReactElement } from 'react'
 import { education } from '../data/education'
-import EducationItem from './EducationItem'
-import Header from './Header'
+import EducationItem from '../components/EducationItem'
+import Header from '../components/Header'
 
 const Education: FC = (): ReactElement => {
   return (
     <div className="container mx-auto">
-      <div className="bg-alternate shadow-sm px-4 py-10">
+      <div className="bg-alternate dark:bg-off-white shadow-sm px-4 py-10">
         <Header title="EDUCATION" />
         {education &&
           education.map((ed, index) => (

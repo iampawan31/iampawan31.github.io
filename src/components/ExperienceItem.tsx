@@ -22,13 +22,15 @@ const ExperienceItem: FC<ExperienceItemProps> = ({
   experience,
 }): ReactElement => {
   return (
-    <div className="pb-10 font-body py-6 group hover:bg-primary dark:hover:bg-alternate dark:hover:text-primary hover:text-alternate rounded-lg transition hover:shadow px-2">
-      <div>
+    <div className="mb-10 font-body py-6 group bg-primary text-alternate dark:bg-alternate dark:text-primary rounded-lg shadow-sm px-2">
+      <div className="mb-2 text-xl">
         <span className="font-bold">{experience.jobTitle}</span> -
         {experience.company}
       </div>
-      <div>{`${experience.from} - ${experience.to}`}</div>
-      <p>{experience.responsibilities}</p>
+      <div className="mb-2">
+        <span className="px-2 py-1 rounded-lg bg-alternate dark:bg-primary dark:text-alternate text-primary">{`${experience.from} - ${experience.to}`}</span>
+      </div>
+      <div>{experience.responsibilities}</div>
       <p className="mt-2">
         <FontAwesomeIcon className="mr-2" icon={faMapMarkerAlt} />
         {experience.location}

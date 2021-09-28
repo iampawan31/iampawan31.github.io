@@ -17,7 +17,7 @@ type ProjectItemProps = {
 
 const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
   return (
-    <div className="font-body py-6 flex rounded-lg transition dark:text-alternate text-primary mb-6 hover:shadow px-2 space-x-4">
+    <div className="font-body py-6 flex rounded-lg transition bg-primary dark:text-primary dark:bg-alternate text-alternate mb-6 shadow px-2 space-x-4">
       <div>
         <img
           className="rounded-lg shadow max-w-sm"
@@ -30,13 +30,13 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
         <div className="py-4">{project.description}</div>
         <div>
           <a
-            className="px-4 py-2 hover:bg-secondary bg-primary dark:bg-alternate dark:text-primary rounded text-alternate"
+            className="px-4 py-2 hover:bg-secondary hover:text-alternate dark:hover:bg-secondary bg-alternate dark:bg-primary dark:text-alternate rounded text-primary"
             href={project.githubLink}
           >
             Github Link
           </a>
           <a
-            className="px-4 ml-2 hover:bg-secondary py-2 bg-primary dark:bg-alternate dark:text-primary rounded text-alternate"
+            className="px-4 py-2 ml-2 hover:bg-secondary hover:text-alternate dark:hover:bg-secondary bg-alternate dark:bg-primary dark:text-alternate rounded text-primary"
             href={project.demoLink}
           >
             Demo
@@ -44,7 +44,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
         </div>
         <div></div>
         {project.technologies && (
-          <div className="pt-4">
+          <div className="pt-4 flex flex-wrap">
             {project.technologies.map((tech, index) => (
               <TechnologyItem index={index} name={tech.name} />
             ))}

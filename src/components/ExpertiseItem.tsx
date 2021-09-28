@@ -8,7 +8,7 @@ type ExpertiseItemProps = {
 
 const ExpertiseItem: FC<ExpertiseItemProps> = ({ icon }): ReactElement => {
   return (
-    <div className="p-6 inline bg-dark text-primary hover:bg-primary hover:text-alternate dark:text-alternate dark:hover:bg-alternate dark:hover:text-primary transition-all duration-200 rounded">
+    <div className="flex bg-dark text-primary w-24 h-24 justify-center items-center hover:bg-primary hover:text-alternate dark:bg-primary dark:text-alternate dark:hover:bg-alternate dark:hover:text-primary transition-all duration-200 rounded">
       <FontAwesomeIcon size="3x" icon={icon} />
     </div>
   )
