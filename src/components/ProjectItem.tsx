@@ -20,7 +20,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
     <div className="font-body py-6 flex rounded-lg transition bg-primary dark:text-primary dark:bg-alternate text-alternate mb-6 shadow px-2 space-x-4">
       <div>
         <img
-          className="rounded-lg shadow max-w-sm"
+          className="rounded-lg shadow max-w-sm filter grayscale"
           src={project.imageLink}
           alt=""
         />
