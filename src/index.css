@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidebar-name,
+.sidebar-link {
+  text-orientation: sideways-right;
+  writing-mode: sideways-lr;
+}

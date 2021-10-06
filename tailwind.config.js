@@ -3,17 +3,23 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {
-      primary: '#232320',
+      primary: '#171321',
       secondary: '#3D56B2',
-      alternate: '#FFFAF6',
-      'off-white': '#EFF2F5',
+      alternate: '#fcf7f1',
+      'off-white': '#faeddf',
+      introduction: '#f0deca',
+      about: '#198597',
+      expertise: '#f8a577',
+      experience: '#fff48f',
     },
     container: {
       padding: {
+        DEFAULT: '1rem',
         sm: '2rem',
-        md: '10rem',
-        lg: '10rem',
-        xl: '10rem',
+        md: '3rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
     },
     fontFamily: {

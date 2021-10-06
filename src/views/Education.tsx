@@ -5,13 +5,15 @@ import Header from '../components/Header'
 
 const Education: FC = (): ReactElement => {
   return (
-    <div className="container mx-auto">
-      <div className="bg-alternate dark:bg-off-white shadow-sm px-4 py-10">
-        <Header title="EDUCATION" />
+    <div className="flex">
+      <div className="bg-alternate w-full px-8 py-16">
         {education &&
           education.map((ed, index) => (
             <EducationItem education={ed} key={index} />
           ))}
+      </div>
+      <div>
+        <Header title="EDUCATION" color="bg-about" />
       </div>
     </div>
   )

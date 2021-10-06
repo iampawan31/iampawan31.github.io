@@ -19,24 +19,24 @@ import Header from '../components/Header'
 
 const Expertise: FC = (): ReactElement => {
   return (
-    <div className="container mx-auto">
-      <div className="bg-alternate dark:bg-off-white shadow-sm px-4 py-10">
-        <Header title="EXPERTISE" />
-        <div className="flex flex-row flex-wrap gap-x-4 gap-y-4">
-          <ExpertiseItem icon={faLaravel} />
-          <ExpertiseItem icon={faReact} />
-          <ExpertiseItem icon={faVuejs} />
-          <ExpertiseItem icon={faHtml5} />
-          <ExpertiseItem icon={faCss3} />
-          <ExpertiseItem icon={faPhp} />
-          <ExpertiseItem icon={faJs} />
-          <ExpertiseItem icon={faNodeJs} />
-          <ExpertiseItem icon={faNode} />
-          <ExpertiseItem icon={faNpm} />
-          <ExpertiseItem icon={faWordpress} />
-          <ExpertiseItem icon={faGit} />
-          <ExpertiseItem icon={faDatabase} />
-        </div>
+    <div className="flex">
+      <div className="bg-alternate flex flex-row flex-wrap gap-x-4 gap-y-4 p-16">
+        <ExpertiseItem icon={faLaravel} />
+        <ExpertiseItem icon={faReact} />
+        <ExpertiseItem icon={faVuejs} />
+        <ExpertiseItem icon={faHtml5} />
+        <ExpertiseItem icon={faCss3} />
+        <ExpertiseItem icon={faPhp} />
+        <ExpertiseItem icon={faJs} />
+        <ExpertiseItem icon={faNodeJs} />
+        <ExpertiseItem icon={faNode} />
+        <ExpertiseItem icon={faNpm} />
+        <ExpertiseItem icon={faWordpress} />
+        <ExpertiseItem icon={faGit} />
+        <ExpertiseItem icon={faDatabase} />
+      </div>
+      <div>
+        <Header title="EXPERTISE" color="bg-expertise" />
       </div>
     </div>
   )

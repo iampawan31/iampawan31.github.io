@@ -5,9 +5,11 @@ import ProjectItem from '../components/ProjectItem'
 
 const Projects: FC = (): ReactElement => {
   return (
-    <div className="container mx-auto">
-      <div className="bg-alternate dark:bg-off-white shadow-sm px-4 py-10">
-        <Header title="PROJECTS" />
+    <div className="flex">
+      <div>
+        <Header title="PROJECTS" color="bg-expertise" />
+      </div>
+      <div className="bg-alternate p-16">
         {projects &&
           projects.map((project, index) => (
             <ProjectItem project={project} key={index} />

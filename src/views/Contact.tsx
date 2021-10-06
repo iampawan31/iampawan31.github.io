@@ -3,9 +3,8 @@ import Header from '../components/Header'
 
 const Contact: FC = (): ReactElement => {
   return (
-    <div className="container mx-auto">
-      <div className="bg-alternate dark:bg-off-white shadow-sm px-4 py-10">
-        <Header title="CONTACT" />
+    <div className="flex">
+      <div className="bg-alternate w-full p-16">
         <form action="">
           <div className="form-control flex flex-col py-4">
             <label htmlFor="name" className="text-2xl font-primary">
@@ -42,6 +41,9 @@ const Contact: FC = (): ReactElement => {
             </button>
           </div>
         </form>
+      </div>
+      <div>
+        <Header title="CONTACT" color="bg-experience" />
       </div>
     </div>
   )
