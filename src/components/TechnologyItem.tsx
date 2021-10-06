@@ -11,7 +11,7 @@ const TechnologyItem: FC<TechnologyItemProps> = ({
 }): ReactElement => {
   return (
     <span
-      className="mr-2 rounded-lg bg-alternate text-primary dark:bg-primary dark:text-alternate px-2 py-1 my-1"
+      className="mr-2 text-sm rounded-lg bg-alternate text-primary dark:bg-primary dark:text-alternate px-2 py-1 my-1"
       key={index}
     >
       {name}
