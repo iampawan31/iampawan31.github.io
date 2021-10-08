@@ -20,7 +20,7 @@ import Header from '../components/Header'
 const Expertise: FC = (): ReactElement => {
   return (
     <div className="flex">
-      <div className="bg-alternate flex flex-row flex-wrap gap-x-4 gap-y-4 p-16">
+      <div className="bg-alternate flex flex-row flex-wrap gap-x-8 gap-y-8 p-16">
         <ExpertiseItem icon={faLaravel} />
         <ExpertiseItem icon={faReact} />
         <ExpertiseItem icon={faVuejs} />
@@ -36,7 +36,7 @@ const Expertise: FC = (): ReactElement => {
         <ExpertiseItem icon={faDatabase} />
       </div>
       <div>
-        <Header title="EXPERTISE" color="bg-expertise" />
+        <Header title="Expertise" color="bg-expertise" />
       </div>
     </div>
   )

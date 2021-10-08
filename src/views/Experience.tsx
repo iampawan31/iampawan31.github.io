@@ -7,7 +7,7 @@ const Experience: FC = (): ReactElement => {
   return (
     <div className="flex">
       <div>
-        <Header title="EXPERIENCE" color="bg-experience" />
+        <Header title="Experience" color="bg-experience" />
       </div>
       <div className="bg-alternate px-8 py-16">
         {experience &&

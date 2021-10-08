@@ -1,25 +1,35 @@
-import { faHamburger } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC, ReactElement, useEffect, useState } from 'react'
+import DarkModeButton from '../components/DarkModeButton'
+import { DARK, LIGHT } from '../constants'
 import { basicInformation } from '../data/basic'
 
-const Sidebar = () => {
+const Sidebar: FC = (): ReactElement => {
+  const [theme, setTheme] = useState(
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? DARK : LIGHT
+  )
+
+  const colorTheme: string = theme === LIGHT ? DARK : LIGHT
+
+  useEffect(() => {
+    const root = window.document.documentElement
+    root.classList.remove(colorTheme)
+    root.classList.add(theme)
+  }, [theme, colorTheme])
+
   return (
-    <div className="dark:bg-primary text-primary dark:text-white h-full text-center w-16 fixed">
-      <div className="pb-4">
-        <FontAwesomeIcon fixedWidth size="lg" icon={faHamburger} />
-      </div>
+    <div className="flex md:flex-col justify-between md:justify-start text-primary dark:text-alternate md:h-full md:text-center md:w-16 md:fixed">
       <div className="">
         <a
           href="/"
-          className="sidebar-name font-primary py-4 text-2xl font-semibold"
+          className="sidebar-name font-primary md:pb-4 text-2xl font-semibold"
         >
           Pawan Kumar
         </a>
       </div>
-      <div>
+      <div className="hidden md:flex flex-col">
         <div className="py-4">
           <a
-            className="font-primary text-lg sidebar-link"
+            className="font-primary text-md sidebar-link"
             href={basicInformation.githubLink}
             target="_blank"
             rel="noreferrer"
@@ -29,7 +39,7 @@ const Sidebar = () => {
         </div>
         <div className="py-4">
           <a
-            className="font-primary text-lg sidebar-link"
+            className="font-primary text-md sidebar-link"
             href={basicInformation.linkedinLink}
             target="_blank"
             rel="noreferrer"
@@ -39,7 +49,7 @@ const Sidebar = () => {
         </div>
         <div className="py-4">
           <a
-            className="font-primary text-lg sidebar-link"
+            className="font-primary text-md sidebar-link"
             href={basicInformation.twitterLink}
             target="_blank"
             rel="noreferrer"
@@ -49,13 +59,19 @@ const Sidebar = () => {
         </div>
         <div className="py-4">
           <a
-            className="font-primary text-lg sidebar-link"
+            className="font-primary text-md sidebar-link"
             href={basicInformation.facebookLink}
             target="_blank"
             rel="noreferrer"
           >
             FB.
           </a>
+        </div>
+        <div>
+          <DarkModeButton
+            colorTheme={theme}
+            setTheme={(color) => setTheme(color)}
+          />
         </div>
       </div>
     </div>

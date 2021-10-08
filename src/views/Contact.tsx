@@ -13,7 +13,7 @@ const Contact: FC = (): ReactElement => {
             <input
               type="text"
               name="name"
-              className="text-2xl bg-primary text-alternate dark:bg-alternate dark:text-primary focus:outline-none rounded p-2 shadow-sm"
+              className="text-2xl bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
             />
           </div>
           <div className="form-control flex flex-col py-4">
@@ -23,7 +23,7 @@ const Contact: FC = (): ReactElement => {
             <input
               type="email"
               name="email"
-              className="text-2xl bg-primary text-alternate dark:bg-alternate dark:text-primary focus:outline-none rounded p-2 shadow-sm"
+              className="text-2xl bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
             />
           </div>
           <div className="form-control flex flex-col py-4">
@@ -32,18 +32,18 @@ const Contact: FC = (): ReactElement => {
             </label>
             <textarea
               name="message"
-              className="text-2xl bg-primary text-alternate dark:bg-alternate dark:text-primary focus:outline-none rounded p-2 shadow-sm"
+              className="text-2xl bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
             ></textarea>
           </div>
           <div>
-            <button className="bg-primary text-alternate dark:bg-alternate dark:text-primary px-4 py-2 font-primary rounded text-2xl">
+            <button className="bg-primary text-alternate px-4 py-2 font-primary rounded text-2xl">
               Submit
             </button>
           </div>
         </form>
       </div>
       <div>
-        <Header title="CONTACT" color="bg-experience" />
+        <Header title="Contact" color="bg-experience" />
       </div>
     </div>
   )

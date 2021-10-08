@@ -8,7 +8,7 @@ type HeaderPropTypes = {
 const Header: FC<HeaderPropTypes> = ({ title, color }): ReactElement => {
   return (
     <div
-      className={`font-primary w-96 h-96 text-primary flex flex-wrap justify-center content-center capitalize font-bold text-center lg:text-left text-2xl lg:text-4xl ${color}`}
+      className={`w-96 h-96 text-primary flex flex-wrap justify-center content-center capitalize font-primary text-center lg:text-left text-2xl lg:text-4xl ${color}`}
     >
       {title}
     </div>

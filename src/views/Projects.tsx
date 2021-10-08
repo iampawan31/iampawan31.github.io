@@ -7,9 +7,9 @@ const Projects: FC = (): ReactElement => {
   return (
     <div className="flex">
       <div>
-        <Header title="PROJECTS" color="bg-expertise" />
+        <Header title="Projects" color="bg-expertise" />
       </div>
-      <div className="bg-alternate p-16">
+      <div className="bg-alternate py-16 px-8 grid grid-cols-2 gap-4">
         {projects &&
           projects.map((project, index) => (
             <ProjectItem project={project} key={index} />

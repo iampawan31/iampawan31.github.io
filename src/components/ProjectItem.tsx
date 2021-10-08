@@ -46,7 +46,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
         {project.technologies && (
           <div className="pt-4 flex flex-wrap">
             {project.technologies.map((tech, index) => (
-              <TechnologyItem index={index} name={tech.name} />
+              <TechnologyItem key={index} name={tech.name} />
             ))}
           </div>
         )}

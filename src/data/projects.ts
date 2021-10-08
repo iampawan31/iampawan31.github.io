@@ -163,7 +163,7 @@ export const projects: {
     ],
   },
   {
-    name: 'ExecutiveAB.com',
+    name: 'Executive AB',
     description: 'September 2009',
     githubLink: 'https://github.com/iampawan31/fullstack_vue_express',
     demoLink: 'https://floating-brook-96150.herokuapp.com',
@@ -188,7 +188,7 @@ export const projects: {
     ],
   },
   {
-    name: 'myecaloriecounts.com',
+    name: 'Mye Calorie Counts',
     description: 'September 2009',
     githubLink: 'https://github.com/iampawan31/fullstack_vue_express',
     demoLink: 'https://floating-brook-96150.herokuapp.com',

@@ -13,7 +13,7 @@ const Education: FC = (): ReactElement => {
           ))}
       </div>
       <div>
-        <Header title="EDUCATION" color="bg-about" />
+        <Header title="Education" color="bg-about" />
       </div>
     </div>
   )

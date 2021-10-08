@@ -13,7 +13,7 @@ const DarkModeButton: FC<DarkModeProps> = ({
   setTheme,
 }): ReactElement => {
   return (
-    <div className="fixed top-5 right-5 transition-all">
+    <div className="">
       <button
         onClick={() => setTheme(colorTheme === DARK ? LIGHT : DARK)}
         className="transition-all cursor-pointer focus:outline-none"

@@ -11,9 +11,9 @@ import Header from '../components/Header'
 
 const About: FC = (): ReactElement => {
   return (
-    <div className="flex">
+    <div className="flex flex-col sm:flex-row">
       <div className="">
-        <Header title="ABOUT" color="bg-about" />
+        <Header title="About" color="bg-about" />
       </div>
       <div className="bg-alternate w-full p-16">
         <div className="text-primary">
