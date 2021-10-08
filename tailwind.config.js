@@ -24,7 +24,7 @@ module.exports = {
     },
     fontFamily: {
       primary: ['Major Mono Display'],
-      body: ['Comfortaa'],
+      body: ['Quicksand'],
     },
     extend: {},
   },

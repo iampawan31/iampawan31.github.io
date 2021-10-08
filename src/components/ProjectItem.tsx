@@ -26,20 +26,20 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
         />
       </div>
       <div className="px-4 pt-4">
-        <div className="font-bold text-2xl">{project.name}</div>
+        <div className="font-semibold text-2xl">{project.name}</div>
         <div className="py-4">{project.description}</div>
         <div className="space-x-2">
           <a
-            className="px-2 py-1 hover:bg-expertise text-sm hover:text-primary bg-primary rounded text-alternate"
+            className="px-2 py-2 hover:bg-expertise text-sm hover:text-primary bg-primary rounded text-alternate"
             href={project.githubLink}
           >
-            Github Link
+            Github
           </a>
           <a
-            className="px-2 py-1 hover:bg-expertise text-sm hover:text-primary bg-primary rounded text-alternate"
+            className="px-2 py-2 hover:bg-expertise text-sm hover:text-primary bg-primary rounded text-alternate"
             href={project.demoLink}
           >
-            Demo Link
+            Demo
           </a>
         </div>
         <div></div>

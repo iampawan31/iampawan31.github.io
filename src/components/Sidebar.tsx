@@ -21,7 +21,7 @@ const Sidebar: FC = (): ReactElement => {
       <div className="">
         <a
           href="/"
-          className="sidebar-name font-primary md:pb-4 text-2xl font-semibold"
+          className="sidebar-name font-primary text-2xl font-semibold"
         >
           Pawan Kumar
         </a>
