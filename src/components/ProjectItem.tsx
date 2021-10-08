@@ -17,7 +17,7 @@ type ProjectItemProps = {
 
 const ProjectItem: FC<ProjectItemProps> = ({ project }): ReactElement => {
   return (
-    <div className="flex flex-col mb-10 font-body pb-6 bg-off-white text-primary rounded-lg shadow-lg">
+    <div className="flex flex-col mb-10 font-body pb-6 bg-off-white text-primary border rounded-lg shadow-lg">
       <div>
         <img
           className="rounded-tl-lg rounded-tr-lg w-full filter grayscale"

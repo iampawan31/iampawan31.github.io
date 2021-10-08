@@ -36,7 +36,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({
         {experience.location}
       </p>
       {experience.technologies && (
-        <div className="pt-4">
+        <div className="pt-4 flex flex-wrap">
           {experience.technologies.map((tech, index) => (
             <TechnologyItem key={index} name={tech.name} />
           ))}

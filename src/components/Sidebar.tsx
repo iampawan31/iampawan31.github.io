@@ -17,7 +17,7 @@ const Sidebar: FC = (): ReactElement => {
   }, [theme, colorTheme])
 
   return (
-    <div className="flex md:flex-col justify-between md:justify-start text-primary dark:text-alternate md:h-full md:text-center md:w-16 md:fixed">
+    <div className="flex p-4 md:py-0 md:flex-col justify-between md:justify-start text-primary dark:text-alternate md:h-full md:text-center md:w-16 md:fixed">
       <div className="">
         <a
           href="/"
@@ -67,12 +67,12 @@ const Sidebar: FC = (): ReactElement => {
             FB.
           </a>
         </div>
-        <div>
-          <DarkModeButton
-            colorTheme={theme}
-            setTheme={(color) => setTheme(color)}
-          />
-        </div>
+      </div>
+      <div>
+        <DarkModeButton
+          colorTheme={theme}
+          setTheme={(color) => setTheme(color)}
+        />
       </div>
     </div>
   )

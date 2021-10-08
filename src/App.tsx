@@ -12,7 +12,7 @@ import Projects from './views/Projects'
 const App: FC = (): ReactElement => {
   return (
     <div className="md:pt-10 bg-off-white font-alternate  dark:bg-primary text-primary">
-      <div className="container mx-auto">
+      <div className="md:container mx-auto">
         <div className="flex flex-col md:flex-row">
           <Sidebar />
           <div className="md:ml-16 flex flex-col">

@@ -5,7 +5,6 @@ import {
   faJs,
   faLaravel,
   faNode,
-  faNodeJs,
   faNpm,
   faPhp,
   faReact,
@@ -19,8 +18,8 @@ import Header from '../components/Header'
 
 const Expertise: FC = (): ReactElement => {
   return (
-    <div className="flex">
-      <div className="bg-alternate flex flex-row flex-wrap gap-x-8 gap-y-8 p-16">
+    <div className="flex flex-col md:flex-row">
+      <div className="bg-alternate flex flex-row justify-center flex-wrap gap-x-2 gap-y-2 md:gap-x-8 md:gap-y-8 py-6 md:p-16">
         <ExpertiseItem icon={faLaravel} />
         <ExpertiseItem icon={faReact} />
         <ExpertiseItem icon={faVuejs} />
@@ -28,14 +27,13 @@ const Expertise: FC = (): ReactElement => {
         <ExpertiseItem icon={faCss3} />
         <ExpertiseItem icon={faPhp} />
         <ExpertiseItem icon={faJs} />
-        <ExpertiseItem icon={faNodeJs} />
         <ExpertiseItem icon={faNode} />
         <ExpertiseItem icon={faNpm} />
         <ExpertiseItem icon={faWordpress} />
         <ExpertiseItem icon={faGit} />
         <ExpertiseItem icon={faDatabase} />
       </div>
-      <div>
+      <div className="order-first md:order-last">
         <Header title="Expertise" color="bg-expertise" />
       </div>
     </div>

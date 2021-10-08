@@ -3,8 +3,8 @@ import Header from '../components/Header'
 
 const Contact: FC = (): ReactElement => {
   return (
-    <div className="flex">
-      <div className="bg-alternate w-full p-16">
+    <div className="flex flex-col md:flex-row">
+      <div className="bg-alternate w-full px-4 py-16 md:p-16">
         <form action="">
           <div className="form-control flex flex-col py-4">
             <label htmlFor="name" className="text-2xl font-primary">
@@ -36,13 +36,13 @@ const Contact: FC = (): ReactElement => {
             ></textarea>
           </div>
           <div>
-            <button className="bg-primary text-alternate px-4 py-2 font-primary rounded text-2xl">
+            <button className="bg-primary text-alternate w-full md:w-auto px-4 py-2 font-primary rounded text-2xl">
               Submit
             </button>
           </div>
         </form>
       </div>
-      <div>
+      <div className="order-first md:order-last">
         <Header title="Contact" color="bg-experience" />
       </div>
     </div>

@@ -3,7 +3,7 @@ import { basicInformation } from '../data/basic'
 
 const Introduction: FC = (): ReactElement => {
   return (
-    <div className="w-full lg:bg-introduction ">
+    <div className="w-full lg:bg-introduction px-4 ">
       <div className="flex flex-col md:flex-row">
         <img
           className="w-96 h-96 md:h-auto object-top object-cover"

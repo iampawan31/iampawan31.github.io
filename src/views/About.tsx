@@ -4,11 +4,11 @@ import Header from '../components/Header'
 
 const About: FC = (): ReactElement => {
   return (
-    <div className="flex flex-col sm:flex-row">
+    <div className="flex flex-col md:flex-row">
       <div className="">
         <Header title="About" color="bg-about" />
       </div>
-      <div className="bg-alternate w-full p-16">
+      <div className="md:bg-alternate w-full px-4 py-6 md:p-16">
         <div className="text-primary">
           <div className="text-xl font-body py-6">{basicInformation.about}</div>
           <p className="font-body  font-extrabold text-md">

@@ -5,7 +5,7 @@ import Header from '../components/Header'
 
 const Experience: FC = (): ReactElement => {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       <div>
         <Header title="Experience" color="bg-experience" />
       </div>
