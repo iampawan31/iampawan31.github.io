@@ -7,5 +7,6 @@
   .sidebar-link {
     text-orientation: sideways-right;
     writing-mode: sideways-lr;
+    writing-mode: vertical-lr;
   }
 }

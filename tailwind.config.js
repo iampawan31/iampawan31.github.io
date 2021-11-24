@@ -27,6 +27,9 @@ module.exports = {
       about: '#198597',
       expertise: '#f8a577',
       experience: '#fff48f',
+      green: '#1B8753',
+      red: '#DC3444',
+      white: '#FFFFFF',
     },
     container: {
       padding: {
@@ -45,7 +48,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+    },
   },
   plugins: [],
 }

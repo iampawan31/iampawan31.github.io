@@ -1,16 +1,51 @@
-import { FC, ReactElement } from 'react'
-import { useForm } from '@formspree/react'
+import { FC, ReactElement, useRef, useState } from 'react'
 import Header from '../components/Header'
 
 const CAPTCHA_KEY = '6LdoT1YdAAAAAHgxNRypYqnZD_MdsGUgAtqJo9_z'
 
 const Contact: FC = (): ReactElement => {
-  const [state, handleSubmit] = useForm('mqknzada')
+  const formEl = useRef<HTMLFormElement>(null)
+  const [loading, setLoading] = useState<boolean>(false)
+  const [success, setSuccess] = useState<boolean>(false)
+  const [status, setStatus] = useState<string>('')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    setLoading(true)
+    const data = new FormData(e.currentTarget)
+    const response = await fetch(e.currentTarget.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+
+    if (response.status === 200) {
+      setLoading(false)
+      setSuccess(true)
+      setStatus("Thank you for contacting. I'll get in touch with you soon!")
+      if (formEl && formEl.current) {
+        formEl.current.reset()
+      }
+    } else {
+      setLoading(false)
+      setSuccess(false)
+      setStatus('Oops! There was a problem submitting your form')
+    }
+  }
 
   return (
     <div className="flex flex-col md:flex-row">
       <div className="bg-alternate w-full px-4 py-16 md:p-16">
-        <form onSubmit={handleSubmit} method="POST">
+        <form
+          ref={formEl}
+          onSubmit={handleSubmit}
+          id="contact-form"
+          action="https://formspree.io/f/mqknzada"
+          method="POST"
+        >
           <div className="form-control flex flex-col py-4">
             <label htmlFor="name" className="text-2xl font-primary">
               Name
@@ -59,13 +94,22 @@ const Contact: FC = (): ReactElement => {
           </div>
           <div>
             <button
-              disabled={state.submitting}
+              disabled={loading}
               type="submit"
-              className="bg-primary text-alternate w-full md:w-auto px-4 py-2 font-primary rounded text-2xl"
+              className="disabled:opacity-50 bg-primary text-alternate w-full md:w-auto px-4 py-2 font-primary rounded text-2xl"
             >
-              Submit
+              {loading ? 'Submitting...' : 'Submit'}
             </button>
           </div>
+          {status ? (
+            <div
+              className={`${
+                success ? 'bg-green' : 'bg-red'
+              } w-full my-4 rounded py-2 px-2 text-white`}
+            >
+              {status}
+            </div>
+          ) : null}
         </form>
       </div>
       <div className="order-first md:order-last">
