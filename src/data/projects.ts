@@ -10,6 +10,31 @@ export const projects: {
   }[]
 }[] = [
   {
+    name: 'Lustrous Gems Group',
+    description: 'September 2009',
+    githubLink: 'https://github.com/iampawan31/worldsbestjeweller.com',
+    demoLink: 'https://www.worldsbestjeweller.com/',
+    imageLink: './worldsbestjeweller.jpeg',
+    technologies: [
+      {
+        name: '#html',
+        color: 'green',
+      },
+      {
+        name: '#javascript',
+        color: 'pink',
+      },
+      {
+        name: '#reactjs',
+        color: 'violet',
+      },
+      {
+        name: '#tailwindcss',
+        color: 'orange',
+      },
+    ],
+  },
+  {
     name: 'Mario App Concept',
     description: 'September 2009',
     githubLink: 'https://github.com/iampawan31/mario-game-kaboomjs',
@@ -167,7 +192,7 @@ export const projects: {
     description: 'September 2009',
     githubLink: 'https://github.com/iampawan31/fullstack_vue_express',
     demoLink: 'https://floating-brook-96150.herokuapp.com',
-    imageLink: './executiveab-nuxtjs.png',
+    imageLink: './executiveab-nuxtjs.jpeg',
     technologies: [
       {
         name: '#vuejs',
@@ -192,7 +217,7 @@ export const projects: {
     description: 'September 2009',
     githubLink: 'https://github.com/iampawan31/fullstack_vue_express',
     demoLink: 'https://floating-brook-96150.herokuapp.com',
-    imageLink: './myecaloriecounts.com.png',
+    imageLink: './myecaloriecounts.com.jpeg',
     technologies: [
       {
         name: '#wordpress',
