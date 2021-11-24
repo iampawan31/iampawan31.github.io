@@ -1,37 +1,16 @@
-import React, { FC, ReactElement } from 'react'
+import { FC, ReactElement } from 'react'
+import { useForm } from '@formspree/react'
 import Header from '../components/Header'
 
 const CAPTCHA_KEY = '6LdoT1YdAAAAAHgxNRypYqnZD_MdsGUgAtqJo9_z'
 
 const Contact: FC = (): ReactElement => {
-  const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-
-    const formData = new FormData(e.currentTarget.value)
-
-    await fetch(e.currentTarget.action, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        Accept: 'application/json',
-      },
-    })
-      .then((res) => {
-        console.log(res, 19)
-      })
-      .catch((err) => {
-        console.log(err, 23)
-      })
-  }
+  const [state, handleSubmit] = useForm('mqknzada')
 
   return (
     <div className="flex flex-col md:flex-row">
       <div className="bg-alternate w-full px-4 py-16 md:p-16">
-        <form
-          action="https://formspree.io/f/mqknzada"
-          onSubmit={submitForm}
-          method="POST"
-        >
+        <form onSubmit={handleSubmit} method="POST">
           <div className="form-control flex flex-col py-4">
             <label htmlFor="name" className="text-2xl font-primary">
               Name
@@ -80,6 +59,7 @@ const Contact: FC = (): ReactElement => {
           </div>
           <div>
             <button
+              disabled={state.submitting}
               type="submit"
               className="bg-primary text-alternate w-full md:w-auto px-4 py-2 font-primary rounded text-2xl"
             >
