@@ -11,10 +11,10 @@ const Introduction: FC = (): ReactElement => {
           alt="profile"
         />
         <div className="md:px-16 md:py-16">
-          <div className="font-body font-light text-4xl md:text-7xl py-6">
-            Hello <br /> I'm <br /> Pawan Kumar
+          <div className="font-body font-light text-4xl md:text-7xl pt-4 pb-0 md:py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
+            Hello <br /> I'm <br className="hidden md:block" /> Pawan Kumar
           </div>
-          <div className="font-body md:text-lg py-6">
+          <div className="font-body md:text-lg py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
             {basicInformation.about}
           </div>
         </div>

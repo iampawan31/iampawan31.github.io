@@ -9,7 +9,7 @@ const Projects: FC = (): ReactElement => {
       <div>
         <Header title="Projects" color="bg-expertise" />
       </div>
-      <div className="bg-alternate py-16 px-8 grid grid-cols-1 xl:grid-cols-2 gap-4">
+      <div className="dark:bg-primary md:dark:bg-alternate md:bg-alternate py-16 px-8 grid grid-cols-1 xl:grid-cols-2 gap-4">
         {projects &&
           projects.map((project, index) => (
             <ProjectItem project={project} key={index} />

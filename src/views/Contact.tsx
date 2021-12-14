@@ -38,7 +38,7 @@ const Contact: FC = (): ReactElement => {
 
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="bg-alternate w-full px-4 py-16 md:p-16">
+      <div className="dark:bg-primary md:dark:bg-alternate md:bg-alternate w-full px-4 py-16 md:p-16">
         <form
           ref={formEl}
           onSubmit={handleSubmit}
@@ -47,46 +47,58 @@ const Contact: FC = (): ReactElement => {
           method="POST"
         >
           <div className="form-control flex flex-col py-4">
-            <label htmlFor="name" className="text-2xl font-primary">
+            <label
+              htmlFor="name"
+              className="text-2xl dark:text-alternate text-primary md:dark:text-primary md:text-primary font-primary"
+            >
               Name
             </label>
             <input
               type="text"
               required
               name="name"
-              className="text-2xl bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
+              className="text-2xl dark:bg-alternate bg-primary md:dark:bg-primary md:bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
             />
           </div>
           <div className="form-control flex flex-col py-4">
-            <label htmlFor="email" className="text-2xl font-primary">
+            <label
+              htmlFor="email"
+              className="text-2xl font-primary dark:text-alternate text-primary md:dark:text-primary md:text-primary"
+            >
               Email
             </label>
             <input
               type="email"
               required
               name="email"
-              className="text-2xl bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
+              className="text-2xl dark:bg-alternate bg-primary md:dark:bg-primary md:bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
             />
           </div>
           <div className="form-control flex flex-col py-4">
-            <label htmlFor="phone" className="text-2xl font-primary">
+            <label
+              htmlFor="phone"
+              className="text-2xl font-primary dark:text-alternate text-primary md:dark:text-primary md:text-primary"
+            >
               Phone
             </label>
             <input
               type="text"
               required
               name="phone"
-              className="text-2xl bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
+              className="text-2xl dark:bg-alternate bg-primary md:dark:bg-primary md:bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
             />
           </div>
           <div className="form-control flex flex-col py-4">
-            <label htmlFor="message" className="text-2xl font-primary">
+            <label
+              htmlFor="message"
+              className="text-2xl font-primary dark:text-alternate text-primary md:dark:text-primary md:text-primary"
+            >
               Message
             </label>
             <textarea
               name="message"
               required
-              className="text-2xl bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
+              className="text-2xl dark:bg-alternate bg-primary md:dark:bg-primary md:bg-primary text-alternate focus:outline-none rounded p-2 shadow-sm"
             ></textarea>
           </div>
           <div className="form-control flex flex-col py-4">
@@ -96,7 +108,7 @@ const Contact: FC = (): ReactElement => {
             <button
               disabled={loading}
               type="submit"
-              className="disabled:opacity-50 bg-primary text-alternate w-full md:w-auto px-4 py-2 font-primary rounded text-2xl"
+              className="disabled:opacity-50 dark:bg-alternate bg-primary md:dark:bg-primary md:bg-primary dark:text-primary text-alternate md:text-white md:dark:text-white w-full md:w-auto px-4 py-2 font-primary rounded text-2xl"
             >
               {loading ? 'Submitting...' : 'Submit'}
             </button>

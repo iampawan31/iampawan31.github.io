@@ -9,7 +9,7 @@ const Experience: FC = (): ReactElement => {
       <div>
         <Header title="Experience" color="bg-experience" />
       </div>
-      <div className="bg-alternate px-8 py-16">
+      <div className="dark:bg-primary md:dark:bg-alternate md:bg-alternate px-8 py-16">
         {experience &&
           experience.map((ex, index) => (
             <ExperienceItem experience={ex} key={index} />
