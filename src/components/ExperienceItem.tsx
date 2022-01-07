@@ -22,7 +22,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({
   experience,
 }): ReactElement => {
   return (
-    <div className="mb-10 font-body py-6 border bg-off-white text-primary rounded-lg shadow-lg px-2">
+    <div className="mb-10 font-body py-6 bg-experience text-primary rounded-lg shadow px-2">
       <div className="mb-2 text-xl">
         <span className="font-bold">{experience.jobTitle}</span> -
         {experience.company}
@@ -41,7 +41,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({
             <TechnologyItem
               key={index}
               name={tech.name}
-              backgroundColor="bg-experience"
+              backgroundColor="bg-primary text-white"
             />
           ))}
         </div>

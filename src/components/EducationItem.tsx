@@ -14,7 +14,7 @@ type EducationItemProps = {
 
 const EducationItem: FC<EducationItemProps> = ({ education }): ReactElement => {
   return (
-    <div className="mb-10 font-body py-6 border bg-off-white text-primary rounded-lg shadow-lg px-2">
+    <div className="mb-10 font-body py-6 bg-about text-white rounded-lg shadow px-2">
       <div className="mb-2 text-xl">
         <span className="font-bold">{education.institutionName}</span>
       </div>

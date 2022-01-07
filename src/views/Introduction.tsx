@@ -14,7 +14,7 @@ const Introduction: FC = (): ReactElement => {
           <div className="font-body font-light text-4xl md:text-7xl pt-4 pb-0 md:py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
             Hello <br /> I'm <br className="hidden md:block" /> Pawan Kumar
           </div>
-          <div className="font-body md:text-lg py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
+          <div className="font-body text-xl md:text-lg py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
             {basicInformation.about}
           </div>
         </div>
