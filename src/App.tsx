@@ -1,33 +1,33 @@
-import { FC, ReactElement } from 'react'
-import Footer from './components/Footer'
-import Sidebar from './components/Sidebar'
-import About from './views/About'
-import Contact from './views/Contact'
-import Education from './views/Education'
-import Experience from './views/Experience'
-import Expertise from './views/Expertise'
-import Introduction from './views/Introduction'
-import Projects from './views/Projects'
+import { FC, ReactElement, useState } from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
+import { LOGIN, DASHBOARD, HOME } from './utils/constants'
+import { signOut } from 'firebase/auth'
+import { auth } from './firebase-config'
 
 const App: FC = (): ReactElement => {
+  const navigate = useNavigate()
+  const [isAuth, setIsAuth] = useState<boolean>(false)
+
+  const signUserOut = () => {
+    signOut(auth).then(() => {
+      localStorage.clear()
+      setIsAuth(false)
+      navigate(LOGIN)
+    })
+  }
+
   return (
-    <div className="md:pt-10 bg-off-white font-alternate  dark:bg-primary text-primary">
-      <div className="md:container mx-auto">
-        <div className="flex flex-col md:flex-row">
-          <Sidebar />
-          <div className="md:ml-16 flex flex-col">
-            <Introduction />
-            <About />
-            <Expertise />
-            <Experience />
-            <Education />
-            <Projects />
-            <Contact />
-            <Footer />
-          </div>
-        </div>
-      </div>
-    </div>
+    <Routes>
+      <Route path={HOME} element={<Home />} />
+      <Route path={LOGIN} element={<Login setIsAuth={setIsAuth} />} />
+      <Route
+        path={DASHBOARD}
+        element={<Dashboard signUserOut={signUserOut} />}
+      />
+    </Routes>
   )
 }
 

@@ -1,6 +1,6 @@
 import { FC, ReactElement, useEffect, useState } from 'react'
 import DarkModeButton from '../components/DarkModeButton'
-import { DARK, LIGHT } from '../constants'
+import { DARK, LIGHT } from '../utils/constants'
 import { basicInformation } from '../data/basic'
 
 const Sidebar: FC = (): ReactElement => {

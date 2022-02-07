@@ -1,0 +1,5 @@
+export const LOGIN = '/login'
+export const DASHBOARD = '/dashboard'
+export const HOME = '/'
+export const DARK = 'dark'
+export const LIGHT = 'light'
