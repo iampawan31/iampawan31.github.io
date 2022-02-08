@@ -1,7 +1,13 @@
 import { FC, ReactElement } from 'react'
-import { basicInformation } from '../data/basic'
+import { RouteProps } from 'react-router-dom'
 
-const Introduction: FC = (): ReactElement => {
+type IntroductionProps = {
+  basicInformation: any
+}
+
+const Introduction: FC<IntroductionProps & RouteProps> = ({
+  basicInformation,
+}): ReactElement => {
   return (
     <div className="w-full lg:bg-introduction px-4 md:px-0 ">
       <div className="flex flex-col md:flex-row">
@@ -12,10 +18,11 @@ const Introduction: FC = (): ReactElement => {
         />
         <div className="md:px-16 md:py-16">
           <div className="font-body font-light text-4xl md:text-7xl pt-4 pb-0 md:py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
-            Hello <br /> I'm <br className="hidden md:block" /> Pawan Kumar
+            Hello <br /> I'm <br className="hidden md:block" />{' '}
+            {`${basicInformation?.firstName} ${basicInformation?.lastName}`}
           </div>
           <div className="font-body text-xl md:text-lg py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
-            {basicInformation.about}
+            {basicInformation?.about}
           </div>
         </div>
       </div>

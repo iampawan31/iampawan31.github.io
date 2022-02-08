@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { FC, ReactElement } from 'react'
+import { RouteProps } from 'react-router-dom'
 import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import About from '../views/About'
@@ -9,14 +10,21 @@ import Expertise from '../views/Expertise'
 import Introduction from '../views/Introduction'
 import Projects from '../views/Projects'
 
-const Home = () => {
+type HomeProps = {
+  portfolio: any
+}
+
+const Home: FC<HomeProps & RouteProps> = ({ portfolio }): ReactElement => {
+  const basicInformation = portfolio.find(
+    (port: any) => port.type === 'basic_information'
+  )
   return (
     <div className="md:pt-10 bg-off-white font-alternate  dark:bg-primary text-primary">
       <div className="md:container mx-auto">
         <div className="flex flex-col md:flex-row">
           <Sidebar />
           <div className="md:ml-16 flex flex-col">
-            <Introduction />
+            <Introduction basicInformation={basicInformation} />
             <About />
             <Expertise />
             <Experience />
