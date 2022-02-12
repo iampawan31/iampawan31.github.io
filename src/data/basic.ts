@@ -13,7 +13,7 @@ export const basicInformation: {
   about: string
 } = {
   name: 'Pawan Kumar',
-  age: new Date().getFullYear() - new Date(1990, 1, 5).getFullYear(),
+  age: new Date().getFullYear() - new Date(1990, 2, 5).getFullYear(),
   position: 'Web Developer',
   city: 'Kanpur',
   state: 'Uttar Pradesh',

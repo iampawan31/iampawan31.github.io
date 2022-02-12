@@ -1,12 +1,12 @@
-import { FC, ReactElement, useState, useEffect } from 'react'
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { signOut } from 'firebase/auth'
+import { collection, getDocs } from 'firebase/firestore'
+import { FC, ReactElement, useEffect, useState } from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import { auth, db } from './firebase-config'
+import Dashboard from './pages/Dashboard'
 import Home from './pages/Home'
 import Login from './pages/Login'
-import Dashboard from './pages/Dashboard'
-import { LOGIN, DASHBOARD, HOME } from './utils/constants'
-import { signOut } from 'firebase/auth'
-import { auth, db } from './firebase-config'
-import { collection, getDocs } from 'firebase/firestore'
+import { DASHBOARD, HOME, LOGIN } from './utils/constants'
 
 const App: FC = (): ReactElement => {
   const navigate = useNavigate()
@@ -16,16 +16,21 @@ const App: FC = (): ReactElement => {
 
   useEffect(() => {
     const getPortfolio = async () => {
-      const data = await getDocs(portfolioCollectionRef)
-      setPortfolio(
-        data.docs.map((doc) => {
-          return { ...doc.data(), id: doc.id }
-        })
-      )
+      try {
+        const data = await getDocs(portfolioCollectionRef)
+
+        setPortfolio(
+          data.docs.map((doc) => {
+            return { ...doc.data(), id: doc.id }
+          })
+        )
+      } catch (error) {
+        setPortfolio([])
+      }
     }
 
     getPortfolio()
-  })
+  }, [])
 
   const signUserOut = () => {
     signOut(auth).then(() => {
