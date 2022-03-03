@@ -1,15 +1,10 @@
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC, ReactElement } from 'react'
+import { educationType } from '../utils/types'
 
 type EducationItemProps = {
-  education: {
-    institutionName: string
-    attendedFrom: string
-    attendedTo: string
-    degree: string
-    location: string
-  }
+  education: educationType
 }
 
 const EducationItem: FC<EducationItemProps> = ({ education }): ReactElement => {
@@ -19,10 +14,10 @@ const EducationItem: FC<EducationItemProps> = ({ education }): ReactElement => {
         <span className="font-bold">{education.institutionName}</span>
       </div>
       <div className="font-bold mb-2">{education.degree}</div>
-      <div className="mb-2">{`${education.attendedFrom} - ${education.attendedTo}`}</div>
+      <div className="mb-2">{`${education.startedOn} - ${education.completedOn}`}</div>
       <div className="mt-2">
         <FontAwesomeIcon className="mr-2" icon={faMapMarkerAlt} />
-        {education.location}
+        {`${education.city}, ${education.state}`}
       </div>
     </div>
   )

@@ -1,9 +1,13 @@
 import { FC, ReactElement, useEffect, useState } from 'react'
 import DarkModeButton from '../components/DarkModeButton'
 import { DARK, LIGHT } from '../utils/constants'
-import { basicInformation } from '../data/basic'
+import { socialLinksType } from '../utils/types'
 
-const Sidebar: FC = (): ReactElement => {
+type SidebarProps = {
+  socialLinks: socialLinksType | undefined
+}
+
+const Sidebar: FC<SidebarProps> = ({ socialLinks }): ReactElement => {
   const [theme, setTheme] = useState(
     window.matchMedia('(prefers-color-scheme: dark)').matches ? DARK : LIGHT
   )
@@ -30,7 +34,7 @@ const Sidebar: FC = (): ReactElement => {
         <div className="py-4">
           <a
             className="font-primary text-md sidebar-link"
-            href={basicInformation.githubLink}
+            href={socialLinks?.github}
             target="_blank"
             rel="noreferrer"
           >
@@ -40,7 +44,7 @@ const Sidebar: FC = (): ReactElement => {
         <div className="py-4">
           <a
             className="font-primary text-md sidebar-link"
-            href={basicInformation.linkedinLink}
+            href={socialLinks?.linkedin}
             target="_blank"
             rel="noreferrer"
           >
@@ -50,7 +54,7 @@ const Sidebar: FC = (): ReactElement => {
         <div className="py-4">
           <a
             className="font-primary text-md sidebar-link"
-            href={basicInformation.twitterLink}
+            href={socialLinks?.twitter}
             target="_blank"
             rel="noreferrer"
           >
@@ -60,7 +64,7 @@ const Sidebar: FC = (): ReactElement => {
         <div className="py-4">
           <a
             className="font-primary text-md sidebar-link"
-            href={basicInformation.facebookLink}
+            href={socialLinks?.facebook}
             target="_blank"
             rel="noreferrer"
           >
