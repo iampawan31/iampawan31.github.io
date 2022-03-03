@@ -1,9 +1,22 @@
 import { collection, getDocs } from 'firebase/firestore'
-import { FC, ReactElement, useRef, useState, useEffect } from 'react'
+import { FC, ReactElement, useEffect, useRef, useState } from 'react'
 import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
 import Footer from './components/Footer'
 import Sidebar from './components/Sidebar'
 import { db } from './firebase-config'
+import {
+  BASIC_INFORMATION_TYPE,
+  EDUCATION_TYPE,
+  EXPERIENCE_TYPE,
+  PORTFOLIO_COLLECTION,
+  SOCIAL_LINKS_TYPE,
+} from './utils/constants'
+import {
+  basicInformationType,
+  educationType,
+  experienceType,
+  socialLinksType,
+} from './utils/types'
 import About from './views/About'
 import Contact from './views/Contact'
 import Education from './views/Education'
@@ -11,18 +24,16 @@ import Experience from './views/Experience'
 import Expertise from './views/Expertise'
 import Introduction from './views/Introduction'
 import Projects from './views/Projects'
-import {
-  basicInformationType,
-  educationType,
-  socialLinksType,
-} from './utils/types'
 
 const App: FC = (): ReactElement => {
   const loaderRef = useRef<LoadingBarRef | null>(null)
   const [portfolio, setPortfolio] = useState<any>([])
-  const [introduction, setIntroduction] = useState<basicInformationType>()
-  const [education, setEducation] = useState<[educationType]>()
-  const [socialLinks, setSocialLinks] = useState<socialLinksType>()
+  const [introduction, setIntroduction] = useState<basicInformationType | null>(
+    null
+  )
+  const [education, setEducation] = useState<[educationType] | []>([])
+  const [socialLinks, setSocialLinks] = useState<socialLinksType | null>(null)
+  const [experiences, setExperiences] = useState<[experienceType] | []>([])
 
   const startLoader = () => {
     if (loaderRef) {
@@ -38,7 +49,7 @@ const App: FC = (): ReactElement => {
 
   const getPortfolio = async () => {
     startLoader()
-    const portfolioRef = collection(db, 'portfolio')
+    const portfolioRef = collection(db, PORTFOLIO_COLLECTION)
     const data = await getDocs(portfolioRef)
     const usersData = data.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
     setPortfolio(usersData)
@@ -53,10 +64,13 @@ const App: FC = (): ReactElement => {
   useEffect(() => {
     if (portfolio) {
       setIntroduction(
-        portfolio.filter((d: any) => d.type === 'basic_information')[0]
+        portfolio.filter((d: any) => d.type === BASIC_INFORMATION_TYPE)[0]
       )
-      setEducation(portfolio.filter((d: any) => d.type === 'education'))
-      setSocialLinks(portfolio.filter((d: any) => d.type === 'social_links')[0])
+      setEducation(portfolio.filter((d: any) => d.type === EDUCATION_TYPE))
+      setExperiences(portfolio.filter((d: any) => d.type === EXPERIENCE_TYPE))
+      setSocialLinks(
+        portfolio.filter((d: any) => d.type === SOCIAL_LINKS_TYPE)[0]
+      )
     }
   }, [portfolio])
 
@@ -71,7 +85,7 @@ const App: FC = (): ReactElement => {
               <Introduction introduction={introduction} />
               <About about={introduction} />
               <Expertise />
-              <Experience />
+              <Experience experiences={experiences} />
               <Education education={education} />
               <Projects />
               <Contact />

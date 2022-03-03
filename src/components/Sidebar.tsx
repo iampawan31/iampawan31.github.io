@@ -4,7 +4,7 @@ import { DARK, LIGHT } from '../utils/constants'
 import { socialLinksType } from '../utils/types'
 
 type SidebarProps = {
-  socialLinks: socialLinksType | undefined
+  socialLinks: socialLinksType | null
 }
 
 const Sidebar: FC<SidebarProps> = ({ socialLinks }): ReactElement => {

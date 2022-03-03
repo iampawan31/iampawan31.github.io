@@ -9,7 +9,7 @@ import { FC, ReactElement } from 'react'
 import { socialLinksType } from '../utils/types'
 
 type FooterProps = {
-  socialLinks: socialLinksType | undefined
+  socialLinks: socialLinksType | null
 }
 
 const Footer: FC<FooterProps> = ({ socialLinks }): ReactElement => {

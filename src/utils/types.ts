@@ -31,3 +31,19 @@ export type socialLinksType = {
   instagram: string
   linkedin: string
 }
+
+export type experienceType = {
+  company: string
+  jobTitle: string
+  from: string
+  to: string
+  responsibilities: string
+  location: string
+  technologies?: []
+  order: number
+}
+
+export type TechnologyItemType = {
+  name: string
+  backgroundColor?: string
+}

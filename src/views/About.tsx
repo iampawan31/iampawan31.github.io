@@ -3,7 +3,7 @@ import { basicInformationType } from '../utils/types'
 import Header from '../components/Header'
 
 type IntroductionProp = {
-  about: basicInformationType | undefined
+  about: basicInformationType | null
 }
 
 const About: FC<IntroductionProp> = ({ about }): ReactElement => {

@@ -2,7 +2,7 @@ import { FC, ReactElement } from 'react'
 import { basicInformationType } from '../utils/types'
 
 type IntroductionProp = {
-  introduction: basicInformationType | undefined
+  introduction: basicInformationType | null
 }
 
 const Introduction: FC<IntroductionProp> = ({ introduction }): ReactElement => {
