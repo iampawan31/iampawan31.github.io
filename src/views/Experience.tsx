@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import { experienceType } from '../utils/types'
 
 type ExperienceProp = {
-  experiences: [experienceType] | []
+  experiences: experienceType[] | []
 }
 
 const Experience: FC<ExperienceProp> = ({ experiences }): ReactElement => {

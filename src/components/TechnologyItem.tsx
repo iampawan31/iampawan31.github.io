@@ -1,7 +1,7 @@
 import { FC, ReactElement } from 'react'
-import { TechnologyItemType } from '../utils/types'
+import { technologyItemType } from '../utils/types'
 
-type TechnologyItemProps = TechnologyItemType | null
+type TechnologyItemProps = technologyItemType | null
 
 const TechnologyItem: FC<TechnologyItemProps> = ({
   name,

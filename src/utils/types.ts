@@ -43,7 +43,18 @@ export type experienceType = {
   order: number
 }
 
-export type TechnologyItemType = {
+export type technologyItemType = {
   name: string
   backgroundColor?: string
+}
+
+export type projectType = {
+  name: string
+  description: string
+  githubLink: string
+  link: string
+  isDemoLink: boolean
+  image: string
+  order: number
+  technologies?: []
 }

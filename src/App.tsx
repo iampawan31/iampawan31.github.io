@@ -10,11 +10,13 @@ import {
   EXPERIENCE_TYPE,
   PORTFOLIO_COLLECTION,
   SOCIAL_LINKS_TYPE,
+  PROJECT_TYPE,
 } from './utils/constants'
 import {
   basicInformationType,
   educationType,
   experienceType,
+  projectType,
   socialLinksType,
 } from './utils/types'
 import About from './views/About'
@@ -31,9 +33,10 @@ const App: FC = (): ReactElement => {
   const [introduction, setIntroduction] = useState<basicInformationType | null>(
     null
   )
-  const [education, setEducation] = useState<[educationType] | []>([])
+  const [education, setEducation] = useState<educationType[] | []>([])
   const [socialLinks, setSocialLinks] = useState<socialLinksType | null>(null)
-  const [experiences, setExperiences] = useState<[experienceType] | []>([])
+  const [experiences, setExperiences] = useState<experienceType[] | []>([])
+  const [projects, setProjects] = useState<projectType[] | []>([])
 
   const startLoader = () => {
     if (loaderRef) {
@@ -71,6 +74,7 @@ const App: FC = (): ReactElement => {
       setSocialLinks(
         portfolio.filter((d: any) => d.type === SOCIAL_LINKS_TYPE)[0]
       )
+      setProjects(portfolio.filter((d: any) => d.type === PROJECT_TYPE))
     }
   }, [portfolio])
 
@@ -87,7 +91,7 @@ const App: FC = (): ReactElement => {
               <Expertise />
               <Experience experiences={experiences} />
               <Education education={education} />
-              <Projects />
+              <Projects projects={projects} />
               <Contact />
               <Footer socialLinks={socialLinks} />
             </div>

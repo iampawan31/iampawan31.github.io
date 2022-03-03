@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import { educationType } from '../utils/types'
 
 type EducationProp = {
-  education: [educationType] | []
+  education: educationType[] | []
 }
 
 const Education: FC<EducationProp> = ({ education }): ReactElement => {
