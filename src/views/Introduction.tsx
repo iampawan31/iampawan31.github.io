@@ -19,7 +19,7 @@ const Introduction: FC<IntroductionProp> = ({ introduction }): ReactElement => {
             Hello <br /> I'm <br className="hidden md:block" />{' '}
             {`${introduction?.firstName} ${introduction?.lastName}`}
           </div>
-          <div className="font-body text-xl md:text-lg py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
+          <div className="hidden font-body text-xl md:text-lg py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
             {introduction?.about}
           </div>
         </div>
