@@ -17,7 +17,7 @@ const About: FC<IntroductionProp> = ({ about }): ReactElement => {
           <div className="text-xl font-body py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
             {about?.about}
           </div>
-          <p className="font-body  font-extrabold text-md dark:text-white text-primary md:dark:text-primary md:text-primary">
+          <p className="hidden font-body  font-extrabold text-md dark:text-white text-primary md:dark:text-primary md:text-primary">
             Age:
             <span className="pl-2 font-body font-normal dark:text-white text-primary md:dark:text-primary md:text-primary">
               {`${about?.age} years`}
