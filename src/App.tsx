@@ -27,6 +27,15 @@ import Expertise from './views/Expertise'
 import Introduction from './views/Introduction'
 import Projects from './views/Projects'
 
+const loaderColors = [
+  '#3D56B2',
+  '#198597',
+  '#f8a577',
+  '#fff48f',
+  '#1B8753',
+  '#DC3444',
+]
+
 const App: FC = (): ReactElement => {
   const loaderRef = useRef<LoadingBarRef | null>(null)
   const [portfolio, setPortfolio] = useState<any>([])
@@ -81,9 +90,12 @@ const App: FC = (): ReactElement => {
     }
   }, [portfolio])
 
+  const loaderColor =
+    loaderColors[Math.floor(Math.random() * loaderColors.length)]
+
   return (
     <>
-      <LoadingBar color="#1b74e4" height={5} shadow ref={loaderRef} />
+      <LoadingBar color={loaderColor} height={5} shadow ref={loaderRef} />
       {!loading && (
         <div className="md:pt-10 bg-off-white font-alternate  dark:bg-primary text-primary">
           <div className="md:container mx-auto">
