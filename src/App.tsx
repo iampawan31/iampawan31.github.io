@@ -30,6 +30,7 @@ import Projects from './views/Projects'
 const App: FC = (): ReactElement => {
   const loaderRef = useRef<LoadingBarRef | null>(null)
   const [portfolio, setPortfolio] = useState<any>([])
+  const [loading, setLoading] = useState<boolean>(false)
   const [introduction, setIntroduction] = useState<basicInformationType | null>(
     null
   )
@@ -52,11 +53,13 @@ const App: FC = (): ReactElement => {
 
   const getPortfolio = async () => {
     startLoader()
+    setLoading(true)
     const portfolioRef = collection(db, PORTFOLIO_COLLECTION)
     const data = await getDocs(portfolioRef)
     const usersData = data.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
     setPortfolio(usersData)
     completeLoader()
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -81,23 +84,25 @@ const App: FC = (): ReactElement => {
   return (
     <>
       <LoadingBar color="#1b74e4" height={5} shadow ref={loaderRef} />
-      <div className="md:pt-10 bg-off-white font-alternate  dark:bg-primary text-primary">
-        <div className="md:container mx-auto">
-          <div className="flex flex-col md:flex-row">
-            <Sidebar socialLinks={socialLinks} />
-            <div className="md:ml-16 flex flex-col">
-              <Introduction introduction={introduction} />
-              <About about={introduction} />
-              <Expertise />
-              <Experience experiences={experiences} />
-              <Education education={education} />
-              <Projects projects={projects} />
-              <Contact />
-              <Footer socialLinks={socialLinks} />
+      {!loading && (
+        <div className="md:pt-10 bg-off-white font-alternate  dark:bg-primary text-primary">
+          <div className="md:container mx-auto">
+            <div className="flex flex-col md:flex-row">
+              <Sidebar socialLinks={socialLinks} />
+              <div className="md:ml-16 flex flex-col">
+                <Introduction introduction={introduction} />
+                <About about={introduction} />
+                <Expertise />
+                <Experience experiences={experiences} />
+                <Education education={education} />
+                <Projects projects={projects} />
+                <Contact />
+                <Footer socialLinks={socialLinks} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   )
 }
