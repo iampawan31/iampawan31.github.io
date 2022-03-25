@@ -13,7 +13,7 @@ const Projects: FC<ProjectsProp> = ({ projects }): ReactElement => {
       <div>
         <Header title="Projects" color="bg-expertise" />
       </div>
-      <div className="dark:bg-primary md:dark:bg-alternate md:bg-alternate py-16 px-8 grid grid-cols-1 xl:grid-cols-2 gap-4">
+      <div className="dark:bg-primary md:dark:bg-primary md:bg-alternate py-16 px-8 grid grid-cols-1 xl:grid-cols-2 gap-4">
         {projects &&
           projects
             .sort((a, b) => b.order - a.order)

@@ -13,7 +13,7 @@ const Experience: FC<ExperienceProp> = ({ experiences }): ReactElement => {
       <div>
         <Header title="Experience" color="bg-experience" />
       </div>
-      <div className="dark:bg-primary md:dark:bg-alternate md:bg-alternate px-8 py-16">
+      <div className="dark:bg-primary md:dark:bg-primary md:dark:text-off-white md:bg-alternate px-8 py-16">
         {experiences &&
           experiences
             .sort((a, b) => b.order - a.order)

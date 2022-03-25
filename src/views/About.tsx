@@ -12,18 +12,18 @@ const About: FC<IntroductionProp> = ({ about }): ReactElement => {
       <div className="">
         <Header title="About" color="bg-about" />
       </div>
-      <div className="md:bg-alternate w-full px-4 py-6 md:p-16">
+      <div className="md:bg-alternate dark:bg-primary w-full px-4 py-6 md:p-16">
         <div className="text-primary">
-          <div className="text-xl font-body py-6 dark:text-white text-primary md:dark:text-primary md:text-primary">
+          <div className="text-xl font-body py-6 dark:text-white text-primary md:dark:text-off-white md:text-primary">
             {about?.about}
           </div>
-          <p className="hidden font-body  font-extrabold text-md dark:text-white text-primary md:dark:text-primary md:text-primary">
+          <p className="hidden font-body  font-extrabold text-md dark:text-white text-primary md:dark:text-off-white md:text-primary">
             Age:
-            <span className="pl-2 font-body font-normal dark:text-white text-primary md:dark:text-primary md:text-primary">
+            <span className="pl-2 font-body font-normal dark:text-white text-primary md:dark:text-off-white md:text-primary">
               {`${about?.age} years`}
             </span>
           </p>
-          <p className="font-body font-extrabold text-md dark:text-white text-primary md:dark:text-primary md:text-primary">
+          <p className="font-body font-extrabold text-md dark:text-white text-primary md:dark:text-off-white md:text-primary">
             Location:
             <span className="pl-2 font-body font-normal">
               {`${about?.city}, ${about?.state}, ${about?.country}`}

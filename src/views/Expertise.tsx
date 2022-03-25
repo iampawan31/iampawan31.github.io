@@ -19,7 +19,7 @@ import Header from '../components/Header'
 const Expertise: FC = (): ReactElement => {
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="bg-alternate flex flex-row justify-center flex-wrap gap-x-2 gap-y-2 md:gap-x-8 md:gap-y-8 py-6 md:p-16">
+      <div className="bg-alternate dark:bg-primary flex flex-row justify-center flex-wrap gap-x-2 gap-y-2 md:gap-x-8 md:gap-y-8 py-6 md:p-16">
         <ExpertiseItem icon={faLaravel} />
         <ExpertiseItem icon={faReact} />
         <ExpertiseItem icon={faVuejs} />

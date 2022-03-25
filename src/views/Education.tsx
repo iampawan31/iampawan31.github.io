@@ -10,7 +10,7 @@ type EducationProp = {
 const Education: FC<EducationProp> = ({ education }): ReactElement => {
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="dark:bg-primary md:dark:bg-alternate bg-alternate w-full px-8 py-16">
+      <div className="dark:bg-primary md:dark:bg-primary bg-alternate w-full px-8 py-16">
         {education &&
           education
             .sort((a, b) => b.order - a.order)

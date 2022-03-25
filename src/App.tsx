@@ -97,7 +97,7 @@ const App: FC = (): ReactElement => {
     <>
       <LoadingBar color={loaderColor} height={5} shadow ref={loaderRef} />
       {!loading && (
-        <div className="md:pt-10 bg-off-white font-alternate  dark:bg-primary text-primary">
+        <div className="md:pt-10 bg-off-white font-alternate  dark:bg-primary-dark text-primary">
           <div className="md:container mx-auto">
             <div className="flex flex-col md:flex-row">
               <Sidebar socialLinks={socialLinks} />

@@ -19,7 +19,8 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     colors: {
-      primary: '#171321',
+      primary: '#333333',
+      'primary-dark': '#222222',
       secondary: '#3D56B2',
       alternate: '#fcf7f1',
       'off-white': '#faeddf',
