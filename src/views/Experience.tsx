@@ -11,7 +11,7 @@ const Experience: FC<ExperienceProp> = ({ experiences }): ReactElement => {
   return (
     <div className="flex flex-col md:flex-row">
       <div>
-        <Header title="Experience" color="bg-experience" />
+        <Header title="Experience" dark={false} color="bg-experience" />
       </div>
       <div className="dark:bg-primary md:dark:bg-primary md:dark:text-off-white md:bg-alternate px-8 py-16">
         {experiences &&

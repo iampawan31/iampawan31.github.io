@@ -1,9 +1,8 @@
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC, ReactElement } from 'react'
-import TechnologyItem from './TechnologyItem'
-
 import { experienceType } from '../utils/types'
+import ExpertiseItem from './ExpertiseItem'
 
 type ExperienceItemProp = {
   experience: experienceType | null
@@ -27,12 +26,14 @@ const ExperienceItem: FC<ExperienceItemProp> = ({
         {experience?.location}
       </p>
       {experience?.technologies && (
-        <div className="pt-4 flex flex-wrap">
+        <div className="pt-4 grid grid-cols-6 md:grid-flow-col md:grid-cols-12 gap-2">
           {experience.technologies.map((tech, index) => (
-            <TechnologyItem
+            <ExpertiseItem
               key={index}
-              name={tech}
-              backgroundColor="bg-primary text-white"
+              icon={`fill-${tech}`}
+              width="w-10"
+              height="w-10"
+              padding="p-2"
             />
           ))}
         </div>

@@ -125,7 +125,7 @@ const Contact: FC = (): ReactElement => {
         </form>
       </div>
       <div className="order-first md:order-last">
-        <Header title="Contact" color="bg-experience" />
+        <Header title="Contact" dark={false} color="bg-experience" />
       </div>
     </div>
   )

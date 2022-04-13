@@ -10,7 +10,7 @@ const About: FC<IntroductionProp> = ({ about }): ReactElement => {
   return (
     <div className="flex flex-col md:flex-row">
       <div className="">
-        <Header title="About" color="bg-about" />
+        <Header title="About" dark={true} color="bg-about" />
       </div>
       <div className="md:bg-alternate dark:bg-primary w-full px-4 py-6 md:p-16">
         <div className="text-primary">

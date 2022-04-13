@@ -1,8 +1,8 @@
-import { FC, ReactElement, useEffect, useState } from 'react'
-import TechnologyItem from './TechnologyItem'
-import { storage } from '../firebase-config'
 import { getDownloadURL, ref } from 'firebase/storage'
+import { FC, ReactElement, useEffect, useState } from 'react'
+import { storage } from '../firebase-config'
 import { projectType } from '../utils/types'
+import ExpertiseItem from './ExpertiseItem'
 
 type ProjectItemProp = {
   project: projectType
@@ -19,13 +19,13 @@ const ProjectItem: FC<ProjectItemProp> = ({ project }): ReactElement => {
     <div className="flex flex-col mb-10 font-body pb-6 bg-expertise text-primary rounded-lg shadow-lg">
       <div>
         <img
-          className="rounded-tl-lg rounded-tr-lg w-full filter grayscale hover:grayscale-0 transition"
+          className="rounded-tl-lg rounded-tr-lg object-cover w-full filter grayscale hover:grayscale-0 transition h-40"
           src={imageSrc}
           alt={project.name}
         />
       </div>
       <div className="px-4 pt-4">
-        <div className="font-semibold text-xl">{project.name}</div>
+        <div className="font-semibold h-8 mb-6 text-xl">{project.name}</div>
         <div className="py-4">{project.description}</div>
         <div className="space-x-2">
           <a
@@ -47,12 +47,14 @@ const ProjectItem: FC<ProjectItemProp> = ({ project }): ReactElement => {
         </div>
         <div></div>
         {project.technologies && (
-          <div className="pt-4 flex flex-wrap">
+          <div className="mt-4 grid grid-cols-6 md:grid-flow-col md:grid-cols-6 gap-4">
             {project.technologies.map((tech, index) => (
-              <TechnologyItem
+              <ExpertiseItem
                 key={index}
-                name={tech}
-                backgroundColor="bg-primary text-white"
+                icon={`fill-${tech}`}
+                width="w-10"
+                height="w-10"
+                padding="p-2"
               />
             ))}
           </div>

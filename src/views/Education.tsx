@@ -17,7 +17,7 @@ const Education: FC<EducationProp> = ({ education }): ReactElement => {
             .map((ed, index) => <EducationItem education={ed} key={index} />)}
       </div>
       <div className="order-first md:order-last">
-        <Header title="Education" color="bg-about" />
+        <Header title="Education" dark={true} color="bg-about" />
       </div>
     </div>
   )
